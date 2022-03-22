@@ -1,2 +1,11 @@
 .vscode
 __pycache__
+
+Pipfile
+Pipfile.lock
+
+test_pickle
+smallerfile
+
+*.joblib
+*.onnx

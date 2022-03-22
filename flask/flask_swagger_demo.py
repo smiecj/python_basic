@@ -88,6 +88,6 @@ class MaskRoute(Resource):
 if __name__ == '__main__':
     # from waitress import serve
     # serve(flask_app, host="0.0.0.0", port=5000, debug=True)
-    ## todo: 增加启动参数，设置debug or 正式环境模式
+    ## todo: 增加启动参数，设置 debug or 正式环境模式
     flask_app.run(debug=True, host="0.0.0.0", port=5000)
 
