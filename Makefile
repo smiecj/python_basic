@@ -23,3 +23,9 @@ run_onns:
 	# /usr/local/miniconda/envs/sklearn_latest/bin/pip3 install skl2onnx
 	# /usr/local/miniconda/envs/sklearn_latest/bin/pip3 install onnxruntime
 	/usr/local/miniconda/envs/sklearn_latest/bin/python3 machine_learning/sklearn/onns_demo.py
+
+run_plotly:
+	pipenv run python3 machine_learning/jupyter_extension/plotly_demo.py
+
+run_bokeh:
+	pipenv run python3 machine_learning/jupyter_extension/bokeh_demo.py
