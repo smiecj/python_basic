@@ -55,5 +55,3 @@ class UserSchema(Schema):
     permission = fields.Str(validate=validate.OneOf(["read", "write", "admin"]))
     age = fields.Int(validate=validate.Range(min=18, max=40))
 
-
-## 当前: 完善 quick start

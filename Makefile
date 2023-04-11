@@ -1,16 +1,19 @@
 # SHELL := /bin/bash
 
 create_pipenv:
-	pip3 install pipenv
+	pip3 install pipenv==2023.3.20
 	pipenv install -r requirements.txt
 
 export_pipenv:
-	pipenv lock -r > requirements.txt
+	pipenv requirements > requirements.txt
 
 run_marchmallow:
 	pipenv run python3 basic/json/marshmallow_demo.py
 
 run_flask:
+	gunicorn -w 4 -b 127.0.0.1:4000 --log-conf web/gunicorn_logging.conf web.flask_demo:app
+
+run_flask_swagger:
 	pipenv run python3 flask/flask_swagger_demo.py
 
 run_pickle:
@@ -29,3 +32,18 @@ run_plotly:
 
 run_bokeh:
 	pipenv run python3 machine_learning/jupyter_extension/bokeh_demo.py
+
+run_args:
+	python3 basic/function/arg.py
+
+run_pyhive:
+	python3 hive/pyhive_presto_local.py
+
+run_mysql:
+	python3 mysql/pymysql_demo.py
+
+run_file:
+	python3 file/file_test.py
+
+run_config_parse:
+	pipenv run python3 config/parser.py

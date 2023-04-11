@@ -9,3 +9,7 @@ smallerfile
 
 *.joblib
 *.onnx
+
+*_local.py
+
+test.sh
